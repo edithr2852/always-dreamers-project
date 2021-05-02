@@ -4,19 +4,23 @@ import * as userService from '../../utilities/users-service';
 
 export default function NavBar({ user, setUser }) {
 	function handleLogOut() {
-		// Delegate to the users-service
 		userService.logOut();
-		// Update state will also cause a re-render
 		setUser(null);
 	}
 
 	return (
 		<nav>
-			<Link to='/orders'>Order History</Link>
+			<Link to='/'>Sponsor a Dreamer</Link>
 			&nbsp; | &nbsp;
-			<Link to='/orders/new'>New Order</Link>
+			<Link to='/aboutus'>All About Us</Link>
 			&nbsp; | &nbsp;
-			<span>{user.name}</span>
+			<Link to='/add'>Add Your Story</Link>
+			&nbsp; | &nbsp;
+			<Link to='/scholarships'>Scholarships</Link>
+			&nbsp; | &nbsp;
+			<Link to='/donations'>Donations</Link>
+			&nbsp; | &nbsp;
+			<span>Welcome, {user.name}</span>
 			&nbsp; | &nbsp;
 			<Link to='' onClick={handleLogOut}>
 				Log Out

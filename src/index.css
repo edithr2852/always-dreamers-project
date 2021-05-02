@@ -1,10 +1,10 @@
 :root {
   --white: #FFFFFF;
   --tan-1: #FBF9F6;
-  --tan-2: #E7E2DD;
-  --tan-3: #E2D9D1;
-  --tan-4: #D3C1AE;
-  --orange: #F67F00;
+  --tan-2: #f8c796;
+  --tan-3: #f8c796;
+  --tan-4: #f6a800;
+  --orange: #f6a800;
   --text-light: #968c84;
   --text-dark: #615954;
 }
@@ -20,7 +20,8 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--tan-4);
+  /* background-image: url("https://images.pexels.com/photos/2395264/pexels-photo-2395264.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-size:auto; */
   padding: 2vmin;
   height: 100vh;
 }
