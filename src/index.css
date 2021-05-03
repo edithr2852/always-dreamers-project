@@ -1,6 +1,6 @@
 :root {
-  --white: #FFFFFF;
-  --tan-1: #FBF9F6;
+  --white: #ffffff;
+  --tan-1: #ffffff;
   --tan-2: #f8c796;
   --tan-3: #f8c796;
   --tan-4: #f6a800;
@@ -9,25 +9,62 @@
   --text-dark: #615954;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
+}
+
+
+.link {
+  color: white;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-image: url("https://images.pexels.com/photos/2395264/pexels-photo-2395264.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
-  background-size:auto; */
+  background-image: url("https://cdn.uc.assets.prezly.com/e7421375-4420-4c8e-9e49-78e3c0a990ae/-/resize/1108x/-/quality/best/-/format/auto/");
+  background-size: auto;
   padding: 2vmin;
   height: 100vh;
+  position: relative;
 }
 
+.aboutMeInput {
+  margin-left: 30%;
+  width: 50px;
+  height: 300px;
+  width: 500px;
+  padding: 5px;
+}
+
+.AddForm {
+  background-color: black;
+  opacity: 0.8;
+  color: white;
+}
+
+.dreamersPage {
+  flex-grow: 4; 
+  align-content: space-between;
+  background-color: black; opacity: 0.81;
+  color: white;
+  margin-right: 40%;
+  margin-left: 40%;
+  padding: 3px;
+
+}
+
+
+
+
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -71,9 +108,9 @@ code {
   align-items: center;
   background-color: var(--tan-1);
   color: var(--text-dark);
-  border: .1vmin solid var(--tan-3);
+  border: 0.1vmin solid var(--tan-3);
   border-radius: 1vmin;
-  padding: .6vmin;
+  padding: 0.6vmin;
   text-align: center;
   font-size: 2vmin;
 }
@@ -81,7 +118,7 @@ code {
 .form-container {
   padding: 3vmin;
   background-color: var(--tan-1);
-  border: .1vmin solid var(--tan-3);
+  border: 0.1vmin solid var(--tan-3);
   border-radius: 1vmin;
 }
 
@@ -106,8 +143,8 @@ label {
 input {
   padding: 1vmin;
   font-size: 2vmin;
-  border: .1vmin solid var(--tan-3);
-  border-radius: .5vmin;
+  border: 0.1vmin solid var(--tan-3);
+  border-radius: 0.5vmin;
   color: var(--text-dark);
   background-image: none !important; /* prevent lastpass */
   outline: none;
@@ -117,7 +154,8 @@ input:focus {
   border-color: var(--orange);
 }
 
-button, a.button {
+button,
+a.button {
   margin: 1vmin;
   padding: 1vmin;
   color: var(--white);
@@ -126,23 +164,26 @@ button, a.button {
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  border: .1vmin solid var(--tan-2);
-  border-radius: .5vmin;
+  border: 0.1vmin solid var(--tan-2);
+  border-radius: 0.5vmin;
   outline: none;
   cursor: pointer;
 }
 
 button.btn-sm {
   font-size: 1.5vmin;
-  padding: .6vmin .8vmin;
+  padding: 0.6vmin 0.8vmin;
 }
 
 button.btn-xs {
-  font-size: 1vmin;
-  padding: .4vmin .5vmin;
+  font-size: 1.3vmin;
+  padding: 0.4vmin 0.5vmin;
+  color: white;
+  text-shadow: -1px 0 rgb(248, 111, 6), 0 1px rgb(248, 111, 6);
 }
 
-button:disabled, form:invalid button[type="submit"] {
+button:disabled,
+form:invalid button[type="submit"] {
   cursor: not-allowed;
   background-color: var(--tan-4);
 }
@@ -151,3 +192,46 @@ button[type="submit"] {
   grid-column: span 2;
   margin: 1vmin 0 0;
 }
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+
+
+
+button {
+    font-family: "Kalam", sans-serif;
+    color: #ffffff;
+    text-shadow: -1px 0 rgb(248, 111, 6), 0 1px rgb(248, 111, 6);
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+}
+
+.nav__links {
+    color: rgb(248, 111, 6);
+}
+
+
+button {
+    padding: 9px 18px;
+    background-color: rgb(255, 217, 187);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgb(248, 111, 6);
+    transition: all 0.3s ease 0s;
+}
+
+
+
+

@@ -33,6 +33,7 @@ export default function AddDreamerForm(props){
 
   return(
     <>
+    <main className="AddForm">
     <h1>Add Your Story</h1>
     <form autoComplete="off" ref={formRef} onSubmit={handleSubmit}>
         <div className="form-group">
@@ -75,16 +76,6 @@ export default function AddDreamerForm(props){
           />
         </div>
         <div className="form-group">
-          <label>Your Story (required)</label>
-          <input
-            className="form-group"
-            name="aboutMe"
-            // value={formData.aboutMe}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
           <label>Personal Link (required)</label>
           <input
             className="form-group"
@@ -93,6 +84,16 @@ export default function AddDreamerForm(props){
             onChange={handleChange}
             required
           />
+        </div>
+        <div className='aboutMeText'>
+          <label>Your Story (required)</label>
+          <textarea className="form-group aboutMeInput"
+            name="aboutMe"
+            // value={formData.aboutMe}
+            onChange={handleChange}
+            required>
+          </textarea>
+        
         </div>
 
         <button
@@ -103,6 +104,7 @@ export default function AddDreamerForm(props){
           ADD Dreamer Story
         </button>
       </form>
+      </main>
     </>
   )
 }

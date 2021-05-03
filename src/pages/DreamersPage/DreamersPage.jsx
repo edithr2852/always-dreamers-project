@@ -4,16 +4,12 @@ import Dreamer from "../../Components/Dreamer/Dreamer";
 function DreamersPage(props) {
   return (
     <>
-      <h1>Dreamers Page</h1>
-      <h4>This will display all the dreamers</h4>
+      <h1>Always Dreamers</h1>
       <div className="DreamerPage-grid">
-				{props.dreamers.map(dreamer =>
-					<Dreamer
-					dreamer={dreamer}
-					key={dreamer._id}
-					/>
-					)}
-		</div>
+          {props.dreamers.map((dreamer) => (
+            <Dreamer dreamer={dreamer} key={dreamer._id} />
+          ))}
+      </div>
     </>
   );
 }
