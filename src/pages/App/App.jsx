@@ -7,6 +7,9 @@ import AddDreamerPage from "../AddDreamerPage/AddDreamerPage"
 import DreamerStoryPage from '../DreamersStoryPage/DreamersStoryPage'
 import EditDreamerPage from '../EditDreamerPage/EditDreamerPage'
 import NavBar from "../../Components/NavBar/NavBar";
+import DonationPage from '../DonationPage/DonationPage';
+import AboutUsPage from '../AboutUsPage/AboutUsPage';
+import ScholarshipPage from '../ScholarshipPage/ScholarshipPage'
 import * as dreamerApi from "../../utilities/dreamers-api";
 
 import "./App.css";
@@ -64,6 +67,15 @@ export default function App() {
       </Route>
       <Route exact path="/edit">
         <EditDreamerPage handleUpdateDreamer={handleUpdateDreamer} />
+      </Route>
+      <Route exact path="/aboutus">
+        <AboutUsPage />
+      </Route>
+      <Route exact path="/scholarships">
+        <ScholarshipPage />
+      </Route>
+      <Route exact path="/donations">
+        <DonationPage />
       </Route>
         </>
       ) : (
