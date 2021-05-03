@@ -24,11 +24,15 @@ export default function NavBar({ user, setUser }) {
           &nbsp; | &nbsp;
           <Link to="/donations" class="navlinks"><button>Donations</button></Link>
           &nbsp; | &nbsp;
-          <span>Welcome, {user.name}</span>
+          {/* {user ? (
+           <span>Welcome, {user.name}</span>
           &nbsp; | &nbsp;
           <Link to="" onClick={handleLogOut} class="navlinks logOutBtn">
             <button>Log Out</button>
-          </Link>
+          </Link> }
+          ) : ( 
+            <Link to="/login" class="navlinks"><button>Login</button></Link>
+          )) */}
         </ul>
     </nav>
     </header>

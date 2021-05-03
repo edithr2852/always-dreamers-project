@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { Redirect, Route, useHistory } from "react-router-dom";
 import { getUser } from "../../utilities/users-service";
 import AuthPage from "../AuthPage/AuthPage";
-import DreamersPage from '../DreamersPage/DreamersPage'
-import AddDreamerPage from "../AddDreamerPage/AddDreamerPage"
-import DreamerStoryPage from '../DreamersStoryPage/DreamersStoryPage'
-import EditDreamerPage from '../EditDreamerPage/EditDreamerPage'
+import DreamersPage from "../DreamersPage/DreamersPage";
+import AddDreamerPage from "../AddDreamerPage/AddDreamerPage";
+import DreamerStoryPage from "../DreamersStoryPage/DreamersStoryPage";
+import EditDreamerPage from "../EditDreamerPage/EditDreamerPage";
 import NavBar from "../../Components/NavBar/NavBar";
-import DonationPage from '../DonationPage/DonationPage';
-import AboutUsPage from '../AboutUsPage/AboutUsPage';
-import ScholarshipPage from '../ScholarshipPage/ScholarshipPage'
+import DonationPage from "../DonationPage/DonationPage";
+import AboutUsPage from "../AboutUsPage/AboutUsPage";
+import ScholarshipPage from "../ScholarshipPage/ScholarshipPage";
 import * as dreamerApi from "../../utilities/dreamers-api";
 
 import "./App.css";
@@ -20,8 +20,8 @@ export default function App() {
   const history = useHistory();
 
   useEffect(() => {
-    history.push('/')
-  }, [dreamers, history])
+    history.push("/");
+  }, [dreamers, history]);
 
   useEffect(() => {
     async function getDreamers() {
@@ -31,42 +31,35 @@ export default function App() {
     getDreamers();
   }, []);
 
-  async function handleAddDreamer (newDreamerData){
-	  const newDreamer = await dreamerApi.create(newDreamerData);
-	  setDreamers([...dreamers, newDreamer])
+  async function handleAddDreamer(newDreamerData) {
+    const newDreamer = await dreamerApi.create(newDreamerData);
+    setDreamers([...dreamers, newDreamer]);
   }
 
   async function handleUpdateDreamer(updatedDreamerData) {
     const updatedDreamer = await dreamerApi.update(updatedDreamerData);
-    const newDreamersArray = dreamers.map(d =>
+    const newDreamersArray = dreamers.map((d) =>
       d._id === updatedDreamer._id ? updatedDreamer : d
-      );
-      setDreamers(newDreamersArray);
+    );
+    setDreamers(newDreamersArray);
   }
 
-  async function handleDeleteDreamer(id){
+  async function handleDeleteDreamer(id) {
     await dreamerApi.deleteOne(id);
-    setDreamers(dreamers.filter(d => d._id !== id))
+    setDreamers(dreamers.filter((d) => d._id !== id));
   }
 
   return (
     <main className="App">
-      {user ? (
-        <>
-          <NavBar user={user} setUser={setUser} />
-          <Route exact path="/">
-            <DreamersPage dreamers={dreamers} handleDeleteDreamer={handleDeleteDreamer} />
-          </Route>
-		  <Route exact path="/add">
-			  <AddDreamerPage 
-			  	handleAddDreamer={handleAddDreamer}
-			  />
-		  </Route>
+      <NavBar user={user} setUser={setUser} />
+      <Route exact path="/">
+        <DreamersPage
+          dreamers={dreamers}
+          handleDeleteDreamer={handleDeleteDreamer}
+        />
+      </Route>
       <Route exact path="/stories">
         <DreamerStoryPage />
-      </Route>
-      <Route exact path="/edit">
-        <EditDreamerPage handleUpdateDreamer={handleUpdateDreamer} />
       </Route>
       <Route exact path="/aboutus">
         <AboutUsPage />
@@ -75,8 +68,16 @@ export default function App() {
         <ScholarshipPage />
       </Route>
       <Route exact path="/donations">
-        <DonationPage />
-      </Route>
+            <DonationPage />
+          </Route>
+      {user ? (
+        <>
+          <Route exact path="/add">
+            <AddDreamerPage handleAddDreamer={handleAddDreamer} />
+          </Route>
+          <Route exact path="/edit">
+            <EditDreamerPage handleUpdateDreamer={handleUpdateDreamer} />
+          </Route>
         </>
       ) : (
         <AuthPage setUser={setUser} />
