@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 function DreamerStory({ dreamer }) {
 	return (
 		<div className='dreamersStoryPage'>
@@ -19,7 +20,7 @@ function DreamerStory({ dreamer }) {
 					<dd>{dreamer.aboutMe}</dd>
 					<br />
 					<dt>Personal Links</dt>
-					<dd><a href={dreamer.personalLink} target="_blank">{dreamer.personalLink}</a></dd>
+					<dd className="link"><a href={dreamer.personalLink} target="_blank">{dreamer.personalLink}</a></dd>
 				</dl>
 			</div>
 			<div className='panel-footer'>

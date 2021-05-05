@@ -1,10 +1,16 @@
 import React from "react";
-import "../../index.scss"
+import "../../index.scss";
 
 export default function AboutUsPage({ handleAddDreamer }) {
   return (
     <>
-      <span>All About Us</span>
+      <div class="patterns">
+        <svg width="100%" height="100%">
+          <text x="50%" y="60%" text-anchor="middle">
+            All About Us
+          </text>
+        </svg>
+      </div>
       <section className="aboutUs-Daca">
         <h2>Keep the DREAM alive!</h2>
         <p>
