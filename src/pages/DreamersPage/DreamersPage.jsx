@@ -1,13 +1,13 @@
 import React from "react";
 import Dreamer from "../../Components/Dreamer/Dreamer";
 
-function DreamersPage(props) {
+function DreamersPage({dreamers, handleDeleteDreamer}) {
   return (
     <>
       <h1>Always Dreamers</h1>
       <div className="DreamerPage-grid">
-          {props.dreamers.map((dreamer) => (
-            <Dreamer dreamer={dreamer} key={dreamer._id} />
+          {dreamers.map((dreamer) => (
+            <Dreamer dreamer={dreamer} key={dreamer._id} handleDeleteDreamer={handleDeleteDreamer} />
           ))}
       </div>
     </>

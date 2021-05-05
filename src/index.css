@@ -59,7 +59,39 @@ body {
 
 }
 
+daca-img {
+  /* margin-left: 800px; */
+  float: right;
+  width: 35%;
+  opacity: .87;
+}
 
+.aboutUs-Daca {
+  text-align: center;
+  margin: 0 auto;
+  width: 63%;
+  background-color: rgb(247, 122, 38); opacity: 0.82;
+  color: white;
+  font-weight: 880;
+  text-shadow: -1px 0 rgb(10, 10, 9), 0 1px rgb(10, 10, 9);
+  /* padding-bottom: 30%; */
+}
+
+.float-left {
+  float: left;
+  width: 63%;
+}
+
+.dreamersStoryPage {
+  text-align: center;
+  margin: 0 auto;
+  width: 63%;
+  background-color: rgb(0, 0, 0); opacity: 0.85;
+  color: white;
+  
+  font-weight: 880;
+  text-shadow: -1px 0 rgb(10, 10, 9), 0 1px rgb(10, 10, 9);
+}
 
 
 

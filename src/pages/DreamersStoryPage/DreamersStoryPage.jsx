@@ -7,12 +7,13 @@ function DreamersStoryPage(props) {
 
 	return (
 		<>
+		<section className='dreamersStoryPage'>
 			<h1>{dreamer.name} is a Dreamer</h1>
 			<DreamerStory
         key={dreamer._id}
         dreamer={dreamer}
       />
-		
+		</section>
 		</>
 	);
 }

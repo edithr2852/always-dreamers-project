@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function DreamerStory({ dreamer }) {
 	return (
-		<div className='panel panel-default'>
+		<div className='dreamersStoryPage'>
 			<div className='panel-body'>
 				<dl>
 					<dt></dt>
@@ -19,11 +19,11 @@ function DreamerStory({ dreamer }) {
 					<dd>{dreamer.aboutMe}</dd>
 					<br />
 					<dt>Personal Links</dt>
-					<dd>{dreamer.personalLink}</dd>
+					<dd><a href={dreamer.personalLink} target="_blank">{dreamer.personalLink}</a></dd>
 				</dl>
 			</div>
 			<div className='panel-footer'>
-				<Link to='/'>RETURN TO LIST</Link>
+				<Link to='/' className='panel-footer'>RETURN TO LIST</Link>
 			</div>
 		</div>
 	);
