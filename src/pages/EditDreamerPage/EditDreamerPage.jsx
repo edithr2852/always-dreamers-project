@@ -28,7 +28,7 @@ export default function EditDreamerPage(props){
 
   return (
     <>
-      <h1>Edit Dreamer</h1>
+      <span>Edit Dreamer</span>
       <form ref={formRef} autoComplete="off" onSubmit={handleSubmit}>
         <div className="form-group">
         <label>Full Name (required)</label>

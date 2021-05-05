@@ -33,8 +33,8 @@ export default function AddDreamerForm(props){
 
   return(
     <>
-    <h1>Add Your Story</h1>
-    <form autoComplete="off" ref={formRef} onSubmit={handleSubmit}>
+    <span>Add Your Story</span>
+    <form autoComplete="off" ref={formRef} onSubmit={handleSubmit} className="AddForm">
         <div className="form-group">
           <label>Full Name (required)</label>
           <input

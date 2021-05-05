@@ -4,7 +4,7 @@ import Dreamer from "../../Components/Dreamer/Dreamer";
 function DreamersPage({dreamers, handleDeleteDreamer}) {
   return (
     <>
-      <h1>Always Dreamers</h1>
+      <span>Always Dreamers</span>
       <div className="DreamerPage-grid">
           {dreamers.map((dreamer) => (
             <Dreamer dreamer={dreamer} key={dreamer._id} handleDeleteDreamer={handleDeleteDreamer} />
