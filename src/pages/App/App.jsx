@@ -56,10 +56,11 @@ export default function App() {
         <DreamersPage
           dreamers={dreamers}
           handleDeleteDreamer={handleDeleteDreamer}
+          user={user}
         />
       </Route>
       <Route exact path="/stories">
-        <DreamerStoryPage />
+        <DreamerStoryPage user={user} />
       </Route>
       <Route exact path="/aboutus">
         <AboutUsPage />
@@ -73,7 +74,7 @@ export default function App() {
       {user ? (
         <>
           <Route exact path="/add">
-            <AddDreamerPage handleAddDreamer={handleAddDreamer} />
+            <AddDreamerPage handleAddDreamer={handleAddDreamer} user={user} />
           </Route>
           <Route exact path="/edit">
             <EditDreamerPage handleUpdateDreamer={handleUpdateDreamer} />

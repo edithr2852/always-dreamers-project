@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 
 const dreamerSchema = new Schema({
+    userId: {type: String},
     name: {type: String, required: true},
     occupation: {type: String, required: true},
     countryOfOrigin: {type: String, required: true},

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Dreamer({ dreamer, handleDeleteDreamer }) {
+function Dreamer({ dreamer, handleDeleteDreamer, user }) {
 	return (
 		<main className="dreamersPage">
 		<div className='panel panel-default'>
@@ -29,12 +29,15 @@ function Dreamer({ dreamer, handleDeleteDreamer }) {
 					EDIT
 				</Link>
 				&nbsp; | &nbsp;
-				<button
+				{/* {dreamer.userId === user._id ( */}
+					<button
 					className='btn btn-xs btn-danger margin-left-10'
 					onClick={() => handleDeleteDreamer(dreamer._id)}
 				>
 					DELETE
 				</button>
+				{/* )} */}
+				
 			</div>
 		</div>
 		</main>

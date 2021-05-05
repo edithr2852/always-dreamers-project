@@ -1,8 +1,8 @@
 import React from "react";
 import AddDreamerForm from '../../Components/AddDreamerForm/AddDreamerForm'
 
-export default function AddDreamerPage({handleAddDreamer}) {
+export default function AddDreamerPage({handleAddDreamer, user}) {
   return (
-    <AddDreamerForm handleAddDreamer={handleAddDreamer} />
+    <AddDreamerForm handleAddDreamer={handleAddDreamer} user={user} />
   )
 }

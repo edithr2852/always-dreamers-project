@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react'
 
-export default function AddDreamerForm(props){
+export default function AddDreamerForm({ handleAddDreamer, user}){
   const [invalidForm, setValidForm] = useState(true);
 	const [formData, setFormData] = useState({
+    userId: user._id,
 		name: {type: String, required: true},
     occupation: {type: String, required: true},
     countryOfOrigin: {type: String, required: true},
@@ -21,7 +22,7 @@ export default function AddDreamerForm(props){
 
 	const handleSubmit = e => {
 		e.preventDefault();
-		props.handleAddDreamer(formData);
+		handleAddDreamer(formData);
 	};
 
 	const handleChange = e => {
