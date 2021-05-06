@@ -2,7 +2,7 @@ import React from "react";
 import "../../index.scss";
 
 export default function AboutUsPage({ handleAddDreamer }) {
-  return (
+  return ( 
     <>
       <div class="patterns">
         <svg width="100%" height="100%">
