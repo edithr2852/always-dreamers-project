@@ -71,18 +71,15 @@ export default function App() {
       <Route exact path="/donations">
             <DonationPage />
           </Route>
-      {user ? (
-        <>
           <Route exact path="/add">
             <AddDreamerPage handleAddDreamer={handleAddDreamer} user={user} />
           </Route>
           <Route exact path="/edit">
             <EditDreamerPage handleUpdateDreamer={handleUpdateDreamer} />
           </Route>
-        </>
-      ) : (
-        <AuthPage setUser={setUser} />
-      )}
+          <Route exact path="/auth">
+            <AuthPage setUser={setUser} />
+          </Route>
     </main>
   );
 }

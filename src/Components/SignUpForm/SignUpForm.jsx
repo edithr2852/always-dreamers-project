@@ -13,11 +13,6 @@ export default class SignUpForm extends Component {
 		};
 	}
 
-	// const [name, setName] = useState('')
-	// const [email, setEmail] = useState('')
-	// const [password, setPassword] = useState('')
-	// const [confirm, setConfirm] = useState('')
-	// const [error, setError] = useState('')
 	handleChange = evt => {
 		this.setState({
 			[evt.target.name]: evt.target.value,
@@ -39,13 +34,6 @@ export default class SignUpForm extends Component {
 			// An error occurred
 			this.setState({ error: 'Sign Up Failed - Try Again' });
 		}
-		// this.setState({
-		//   name: '',
-		//   email: '',
-		//   password: '',
-		//   confirm: '',
-		//   error: '',
-		// })
 	};
 
 	render() {

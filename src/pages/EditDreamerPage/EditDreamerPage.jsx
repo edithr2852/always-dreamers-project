@@ -28,8 +28,14 @@ export default function EditDreamerPage(props){
 
   return (
     <>
-      <span>Edit Dreamer</span>
-      <form ref={formRef} autoComplete="off" onSubmit={handleSubmit}>
+      <div class="patterns">
+        <svg width="100%" height="100%">
+          <text x="50%" y="60%" text-anchor="middle">
+          Edit Dreamer
+          </text>
+        </svg>
+      </div>
+      <form ref={formRef} autoComplete="off" onSubmit={handleSubmit} className="AddForm">
         <div className="form-group">
         <label>Full Name (required)</label>
           <input
@@ -96,7 +102,7 @@ export default function EditDreamerPage(props){
         >
           SAVE DREAMER
         </button>&nbsp;&nbsp;
-        <Link to='/'>CANCEL</Link>
+        <Link to='/' className="link">CANCEL</Link>
       </form>
     </>
   );

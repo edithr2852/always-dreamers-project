@@ -1,7 +1,7 @@
 import React from "react";
 import Dreamer from "../../Components/Dreamer/Dreamer";
 
-function DreamersPage({dreamers, handleDeleteDreamer}) {
+function DreamersPage({dreamers, handleDeleteDreamer, user}) {
   return (
     <>
       <div class="patterns">
@@ -11,11 +11,9 @@ function DreamersPage({dreamers, handleDeleteDreamer}) {
           </text>
         </svg>
       </div>
-
-
       <div className="DreamerPage grid">
           {dreamers.map((dreamer) => (
-            <Dreamer dreamer={dreamer} key={dreamer._id} handleDeleteDreamer={handleDeleteDreamer} />
+            <Dreamer dreamer={dreamer} key={dreamer._id} handleDeleteDreamer={handleDeleteDreamer} user={user} />
           ))}
       </div>
     </>

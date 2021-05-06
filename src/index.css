@@ -17,9 +17,16 @@
   box-sizing: border-box;
 }
 
-
+.underline {
+  text-decoration: underline;
+}
 .link {
-  color: white;
+  color: #e9ad92;
+}
+
+.donation-link {
+  color: #e9ad92;
+  font-size: 20px;
 }
 
 body {
@@ -27,7 +34,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("https://cdn.uc.assets.prezly.com/e7421375-4420-4c8e-9e49-78e3c0a990ae/-/resize/1108x/-/quality/best/-/format/auto/");
+  background-image: url("./images/buterflyapp.jpeg");
   background-size: auto;
   padding: 2vmin;
   height: 100vh;
@@ -38,7 +45,7 @@ svg text {
   font-family: Lora;
   letter-spacing: 10px;
   stroke: #ce4e13;
-  font-size: 120px;
+  font-size: 110px;
   font-weight: 700;
   stroke-width: 3;
  
@@ -79,22 +86,32 @@ svg text {
   border-radius: 1vmin;
 }
 
-
-
-/* .dreamersPage {
-  flex-grow: 4; 
-  align-content: space-between;
-  background-color: black; opacity: 0.81;
+.scholarshipPage {
+  background-color: rgb(247, 122, 38); opacity: 0.91;
   color: white;
-  margin-right: 40%;
-  margin-left: 40%;
-  padding: 3px;
+  text-shadow: -1px 0 rgb(10, 10, 9), 0 1px rgb(10, 10, 9);
+  justify-content: space-between;
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 40px;
+}
 
-} */
+.donationPage{
+  background-color: rgb(247, 122, 38); opacity: 0.91;
+  color: white;
+  text-shadow: -1px 0 rgb(10, 10, 9), 0 1px rgb(10, 10, 9);
+  justify-content: space-between;
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 40px;
+}
 
 .DreamerPage {
-  background-color: black; opacity: 0.85;
+  background-color: rgb(247, 122, 38); opacity: 0.91;
   color: white;
+  text-shadow: -1px 0 rgb(10, 10, 9), 0 1px rgb(10, 10, 9);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -123,18 +140,44 @@ daca-img {
   text-shadow: -1px 0 rgb(10, 10, 9), 0 1px rgb(10, 10, 9);
 }
 
+.addstory {
+  text-align: center;
+  margin: 0 auto;
+  width: 63%;
+  background-color: rgb(247, 122, 38); opacity: 0.91;
+  color: white;
+  font-weight: 880;
+  text-shadow: -1px 0 rgb(10, 10, 9), 0 1px rgb(10, 10, 9);
+  padding: 15px;
+}
+
+.addstorydiv {
+  margin-top: 60px;
+  margin-right: 25%;
+  margin-left: 25%;
+}
+
+.border {
+  border: black dotted;
+}
 .dreamersStoryPage {
   text-align: center;
   margin: 0 auto;
   width: 63%;
-  background-color: rgb(0, 0, 0); opacity: 0.85;
+  background-color: rgb(247, 122, 38); opacity: 0.91;
   color: rgb(255, 255, 255);
-  
+  padding-bottom: 30px;
   font-weight: 880;
   text-shadow: -1px 0 rgb(10, 10, 9), 0 1px rgb(10, 10, 9);
 }
 
+.daca-img {
+  float: right;
+  /* margin-right: 200px; */
+  margin: 30px 30px;
+  opacity: 0.93;
 
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

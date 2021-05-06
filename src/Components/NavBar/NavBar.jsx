@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import AuthPage from "../../pages/AuthPage/AuthPage"
 import * as userService from "../../utilities/users-service";
 
 export default function NavBar({ user, setUser }) {
@@ -23,13 +24,20 @@ export default function NavBar({ user, setUser }) {
           <Link to="/scholarships" class="navlinks"><button>Scholarships</button></Link>
           &nbsp; | &nbsp;
           <Link to="/donations" class="navlinks"><button>Donations</button></Link>
+          {user ? (
+          <>
           &nbsp; | &nbsp;
-           {user && <span>Welcome, {user.name}</span>}
+           <span>Welcome, {user.name}</span>
           &nbsp; | &nbsp;
-          {user &&
           <Link to="" onClick={handleLogOut} class="navlinks logOutBtn">
             <button>Log Out</button>
-          </Link>  }
+          </Link>  
+          </>
+          ) : (
+
+            <Link to="/auth" class="navlinks"><button>Login</button> 
+            </Link>
+          )}
         </ul>
     </nav>
     </header>
