@@ -41,7 +41,7 @@ export default function EditDreamerPage(props){
           <input
             className="form-group"
             name="name"
-            // value={formData.name}
+            value={formData.name}
             onChange={handleChange}
             required
           />
@@ -51,7 +51,7 @@ export default function EditDreamerPage(props){
           <input
             className="form-group"
             name="occupation"
-            // value={formData.occupation}
+            value={formData.occupation}
             onChange={handleChange}
             required
           />
@@ -61,7 +61,7 @@ export default function EditDreamerPage(props){
           <input
             className="form-group"
             name="countryOfOrigin"
-            // value={formData.countryOfOrigin}
+            value={formData.countryOfOrigin}
             onChange={handleChange}
           />
         </div>
@@ -70,17 +70,7 @@ export default function EditDreamerPage(props){
           <input
             className="form-group"
             name="languages"
-            // value={formData.languages}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label>Your Story (required)</label>
-          <input
-            className="form-group"
-            name="aboutMe"
-            // value={formData.aboutMe}
+            value={formData.languages}
             onChange={handleChange}
             required
           />
@@ -88,9 +78,19 @@ export default function EditDreamerPage(props){
         <div className="form-group">
           <label>Personal Link (required)</label>
           <input
-            className="form-group"
+            className="form-group "
             name="personalLink"
-            // value={formData.personalLink}
+            value={formData.personalLink}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label>Your Story (required)</label>
+          <input
+            className="form-group aboutMeInput"
+            name="aboutMe"
+            value={formData.aboutMe}
             onChange={handleChange}
             required
           />

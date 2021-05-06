@@ -34,9 +34,11 @@ export default function NavBar({ user, setUser }) {
           </Link>  
           </>
           ) : (
-
+            <>
+            &nbsp; | &nbsp;
             <Link to="/auth" class="navlinks"><button>Login</button> 
             </Link>
+            </>
           )}
         </ul>
     </nav>
