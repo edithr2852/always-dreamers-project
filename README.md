@@ -7,7 +7,7 @@ _______________________________________________________
 #### Always Dreamers is a website where both Dreamers and sponsors can read the amazing stories that Dreamers post in the hopes of getting sponsored so that they can continue their journey in the United States.
 _______________________________________________________
 
-# [Always Dreamers](https://always-dreamers.herokuapp.com/) 
+## Launch the app: [Always Dreamers](https://always-dreamers.herokuapp.com/) 
 _______________________________________________________
 
 ## Finished Product
