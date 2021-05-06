@@ -81,7 +81,7 @@ svg text {
 
 
 
-.dreamersPage {
+/* .dreamersPage {
   flex-grow: 4; 
   align-content: space-between;
   background-color: black; opacity: 0.81;
@@ -90,10 +90,24 @@ svg text {
   margin-left: 40%;
   padding: 3px;
 
+} */
+
+.DreamerPage {
+  background-color: black; opacity: 0.85;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 5%;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 30px;
+
 }
 
 daca-img {
-  /* margin-left: 800px; */
+  margin-left: 800px;
   float: right;
   width: 35%;
   opacity: .87;
@@ -143,19 +157,19 @@ code {
   font-size: smaller;
 }
 
-.flex-ctr-ctr {
+/* .flex-ctr-ctr {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.flex-col {
+/* .flex-col {
   flex-direction: column;
 }
 
 .flex-j-end {
   justify-content: flex-end;
-}
+} */
 
 .scroll-y {
   overflow-y: scroll;
@@ -205,7 +219,7 @@ input {
   border: 0.1vmin solid var(--tan-3);
   border-radius: 0.5vmin;
   color: var(--text-dark);
-  background-image: none !important; /* prevent lastpass */
+  background-image: none !important; 
   outline: none;
 }
 

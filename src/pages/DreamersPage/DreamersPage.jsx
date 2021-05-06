@@ -11,7 +11,9 @@ function DreamersPage({dreamers, handleDeleteDreamer}) {
           </text>
         </svg>
       </div>
-      <div className="DreamerPage-grid">
+
+
+      <div className="DreamerPage grid">
           {dreamers.map((dreamer) => (
             <Dreamer dreamer={dreamer} key={dreamer._id} handleDeleteDreamer={handleDeleteDreamer} />
           ))}
