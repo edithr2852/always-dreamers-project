@@ -25,9 +25,11 @@ app.listen(port, function () {
 	console.log(`Express app running on port ${port}`);
 });
 
-app.use('/api/dreamers', require('./routes/api/dreamers'))
 app.use('/api/users', require('./routes/api/users'));
+app.use('/api/dreamers', require('./routes/api/dreamers'))
 
+// const ensureLoggedIn = require('./config/ensureLoggedIn');
+// app.use('/api/dreamers', ensureLoggedIn, require('./routes/api/dreamers'));
 
 // The following "catch all" route (note the *) is necessary
 app.get('/*', function (req, res) {
