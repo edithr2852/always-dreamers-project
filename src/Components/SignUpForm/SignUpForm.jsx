@@ -31,6 +31,7 @@ export default class SignUpForm extends Component {
     } catch {
       this.setState({ error: "Sign Up Failed - Try Again" });
     }
+    window.location.href = "/";
   };
 
   render() {
