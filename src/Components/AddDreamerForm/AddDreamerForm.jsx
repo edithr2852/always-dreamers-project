@@ -1,53 +1,55 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect } from "react";
 
-export default function AddDreamerForm({ handleAddDreamer, user}){
+export default function AddDreamerForm({ handleAddDreamer, user }) {
   const [invalidForm, setValidForm] = useState(true);
-	const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
     userId: user._id,
-		name: {type: String, required: true},
-    occupation: {type: String, required: true},
-    countryOfOrigin: {type: String, required: true},
-    languages: {type: String, required: true},
-    aboutMe: {type: String, required: true},
-    personalLink: String
-	});
+    name: { type: String, required: true },
+    occupation: { type: String, required: true },
+    countryOfOrigin: { type: String, required: true },
+    languages: { type: String, required: true },
+    aboutMe: { type: String, required: true },
+    personalLink: String,
+  });
 
   const formRef = useRef();
 
-	useEffect(() => {
-		formRef.current.checkValidity()
-			? setValidForm(false)
-			: setValidForm(true);
-	}, [formData]);
+  useEffect(() => {
+    formRef.current.checkValidity() ? setValidForm(false) : setValidForm(true);
+  }, [formData]);
 
-	const handleSubmit = e => {
-		e.preventDefault();
-		handleAddDreamer(formData);
-	};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleAddDreamer(formData);
+  };
 
-	const handleChange = e => {
-		setFormData({
-			...formData,
-			[e.target.name]: e.target.value,
-		});
-	};
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-  return(
+  return (
     <>
-    <div class="patterns">
+      <div class="patterns">
         <svg width="100%" height="100%">
           <text x="50%" y="60%" text-anchor="middle">
-          Add Your Story
+            Add Your Story
           </text>
         </svg>
       </div>
-    <form autoComplete="off" ref={formRef} onSubmit={handleSubmit} className="AddForm">
+      <form
+        autoComplete="off"
+        ref={formRef}
+        onSubmit={handleSubmit}
+        className="AddForm"
+      >
         <div className="form-group">
           <label>Full Name (required)</label>
           <input
             className="form-group"
             name="name"
-            // value={formData.name}
             onChange={handleChange}
             required
           />
@@ -57,7 +59,6 @@ export default function AddDreamerForm({ handleAddDreamer, user}){
           <input
             className="form-group"
             name="occupation"
-            // value={formData.occupation}
             onChange={handleChange}
             required
           />
@@ -67,7 +68,6 @@ export default function AddDreamerForm({ handleAddDreamer, user}){
           <input
             className="form-group"
             name="countryOfOrigin"
-            // value={formData.countryOfOrigin}
             onChange={handleChange}
           />
         </div>
@@ -76,41 +76,36 @@ export default function AddDreamerForm({ handleAddDreamer, user}){
           <input
             className="form-group"
             name="languages"
-            // value={formData.languages}
             onChange={handleChange}
             required
           />
         </div>
-       
+
         <div className="form-group">
           <label>Personal Link (required)</label>
           <input
             className="form-group"
             name="personalLink"
-            // value={formData.personalLink}
             onChange={handleChange}
             required
           />
         </div>
         <div className="story-input">
           <label>Your Story (required)</label>
-          <textarea rows="15" cols="60"
+          <textarea
+            rows="15"
+            cols="60"
             className="form-group"
             name="aboutMe"
-            // value={formData.aboutMe}
             onChange={handleChange}
             required
           />
         </div>
 
-        <button
-        className="btn btn-3"
-          type="submit"
-          disabled={invalidForm}
-        >
+        <button className="btn btn-3" type="submit" disabled={invalidForm}>
           ADD Dreamer Story
         </button>
       </form>
     </>
-  )
+  );
 }

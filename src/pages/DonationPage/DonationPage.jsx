@@ -26,19 +26,11 @@ export default function DonationPage({ handleAddDreamer }) {
           The Refugee & Immigrant Center for Education & Legal Services
         </a>
         <hr />
-        <a
-          href="https://unitedwedream.org/"
-          target="_blank"
-          className="neon"
-        >
+        <a href="https://unitedwedream.org/" target="_blank" className="neon">
           United We Dream
         </a>
         <hr />
-        <a
-          href="https://www.alientoaz.org/"
-          target="_blank"
-          className="neon"
-        >
+        <a href="https://www.alientoaz.org/" target="_blank" className="neon">
           Aliento
         </a>
         <hr />

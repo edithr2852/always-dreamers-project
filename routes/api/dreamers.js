@@ -7,6 +7,6 @@ router.get("/", dreamersCtrl.index);
 router.post("/", ensureLoggedIn, dreamersCtrl.create);
 router.get("/:id", dreamersCtrl.show);
 router.put("/:id", ensureLoggedIn, dreamersCtrl.update);
-router.delete('/:id', ensureLoggedIn, dreamersCtrl.delete);
+router.delete("/:id", ensureLoggedIn, dreamersCtrl.delete);
 
 module.exports = router;

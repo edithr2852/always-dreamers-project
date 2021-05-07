@@ -69,17 +69,17 @@ export default function App() {
         <ScholarshipPage />
       </Route>
       <Route exact path="/donations">
-            <DonationPage />
-          </Route>
-          <Route exact path="/add">
-            <AddDreamerPage handleAddDreamer={handleAddDreamer} user={user} />
-          </Route>
-          <Route exact path="/edit">
-            <EditDreamerPage handleUpdateDreamer={handleUpdateDreamer} />
-          </Route>
-          <Route exact path="/auth">
-            <AuthPage setUser={setUser} />
-          </Route>
+        <DonationPage />
+      </Route>
+      <Route exact path="/add">
+        <AddDreamerPage handleAddDreamer={handleAddDreamer} user={user} />
+      </Route>
+      <Route exact path="/edit">
+        <EditDreamerPage handleUpdateDreamer={handleUpdateDreamer} />
+      </Route>
+      <Route exact path="/auth">
+        <AuthPage setUser={setUser} />
+      </Route>
     </main>
   );
 }

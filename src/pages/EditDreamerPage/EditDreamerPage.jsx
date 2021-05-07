@@ -1,43 +1,47 @@
-import React, {useState, useEffect, useRef} from 'react';
-import {Link, useLocation} from 'react-router-dom';
+import React, { useState, useEffect, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
 
-export default function EditDreamerPage(props){
-
-  const location = useLocation()
+export default function EditDreamerPage(props) {
+  const location = useLocation();
 
   const [invalidForm, setValidForm] = useState(true);
-  const [formData, setFormData] = useState(location.state.dreamer)
-  
+  const [formData, setFormData] = useState(location.state.dreamer);
+
   const formRef = useRef();
 
   useEffect(() => {
-      formRef.current.checkValidity() ? setValidForm(false) : setValidForm(true)
+    formRef.current.checkValidity() ? setValidForm(false) : setValidForm(true);
   }, [formData]);
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     props.handleUpdateDreamer(formData);
-  }
+  };
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
+      [e.target.name]: e.target.value,
+    });
+  };
 
   return (
     <>
       <div class="patterns">
         <svg width="100%" height="100%">
           <text x="50%" y="60%" text-anchor="middle">
-          Edit Dreamer
+            Edit Dreamer
           </text>
         </svg>
       </div>
-      <form ref={formRef} autoComplete="off" onSubmit={handleSubmit} className="AddForm">
+      <form
+        ref={formRef}
+        autoComplete="off"
+        onSubmit={handleSubmit}
+        className="AddForm"
+      >
         <div className="form-group">
-        <label>Full Name (required)</label>
+          <label>Full Name (required)</label>
           <input
             className="form-group"
             name="name"
@@ -95,14 +99,13 @@ export default function EditDreamerPage(props){
             required
           />
         </div>
-        <button
-          type="submit"
-          className="btn btn-3"
-          disabled={invalidForm}
-        >
+        <button type="submit" className="btn btn-3" disabled={invalidForm}>
           SAVE DREAMER
-        </button >&nbsp;&nbsp;
-        <Link to='/' className="link"><button className="btn btn-3">CANCEL</button></Link>
+        </button>
+        &nbsp;&nbsp;
+        <Link to="/" className="link">
+          <button className="btn btn-3">CANCEL</button>
+        </Link>
       </form>
     </>
   );

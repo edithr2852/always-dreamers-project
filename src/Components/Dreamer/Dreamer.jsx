@@ -18,37 +18,36 @@ function Dreamer({ dreamer, handleDeleteDreamer, user }) {
                 pathname: "/stories",
                 state: { dreamer },
               }}
-            ><button className="btn btn-3">
-              DETAILS
-              </button>
+            >
+              <button className="btn btn-3">DETAILS</button>
             </Link>
-			{user && (
-				<>
-            {dreamer.userId === user._id && (
+            {user && (
               <>
-                &nbsp; | &nbsp;
-                <Link
-                  className="link btn btn-xs btn-warning"
-                  to={{
-                    pathname: "/edit",
-                    state: { dreamer },
-                  }}
-                ><button className="btn btn-3">
-                  EDIT
-                  </button>
-                </Link>
-                &nbsp; | &nbsp;
-                <div class="container">
-                <button className="btn btn-3"
-                  onClick={() => handleDeleteDreamer(dreamer._id)}
-                >
-                  DELETE
-                </button>
-                </div>
+                {dreamer.userId === user._id && (
+                  <>
+                    &nbsp; | &nbsp;
+                    <Link
+                      className="link btn btn-xs btn-warning"
+                      to={{
+                        pathname: "/edit",
+                        state: { dreamer },
+                      }}
+                    >
+                      <button className="btn btn-3">EDIT</button>
+                    </Link>
+                    &nbsp; | &nbsp;
+                    <div class="container">
+                      <button
+                        className="btn btn-3"
+                        onClick={() => handleDeleteDreamer(dreamer._id)}
+                      >
+                        DELETE
+                      </button>
+                    </div>
+                  </>
+                )}
               </>
             )}
-			</>
-			)}
           </div>
         </div>
       </main>
