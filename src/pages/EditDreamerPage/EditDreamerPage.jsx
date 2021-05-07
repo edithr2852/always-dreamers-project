@@ -97,12 +97,12 @@ export default function EditDreamerPage(props){
         </div>
         <button
           type="submit"
-          className="btn btn-xs"
+          className="btn btn-3"
           disabled={invalidForm}
         >
           SAVE DREAMER
-        </button>&nbsp;&nbsp;
-        <Link to='/' className="link">CANCEL</Link>
+        </button >&nbsp;&nbsp;
+        <Link to='/' className="link"><button className="btn btn-3">CANCEL</button></Link>
       </form>
     </>
   );

@@ -20,6 +20,11 @@
 .underline {
   text-decoration: underline;
 }
+
+dd {
+  margin-: 40px;
+}
+
 .link {
   color: #e9ad92;
 }
@@ -117,8 +122,8 @@ svg text {
   justify-content: space-between;
   text-align: center;
   margin-top: 5%;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 20%;
+  margin-right: 20%;
   padding: 30px;
 
 }
@@ -173,7 +178,6 @@ daca-img {
 
 .daca-img {
   float: right;
-  /* margin-right: 200px; */
   margin: 30px 30px;
   opacity: 0.93;
 
@@ -199,20 +203,6 @@ code {
 .smaller {
   font-size: smaller;
 }
-
-/* .flex-ctr-ctr {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* .flex-col {
-  flex-direction: column;
-}
-
-.flex-j-end {
-  justify-content: flex-end;
-} */
 
 .scroll-y {
   overflow-y: scroll;
@@ -270,57 +260,10 @@ input:focus {
   border-color: var(--orange);
 }
 
-button,
-a.button {
-  margin: 1vmin;
-  padding: 1vmin;
-  color: var(--white);
-  background-color: var(--orange);
-  font-size: 2vmin;
-  font-weight: bold;
-  text-decoration: none;
-  text-align: center;
-  border: 0.1vmin solid var(--tan-2);
-  border-radius: 0.5vmin;
-  outline: none;
-  cursor: pointer;
-}
-
-button.btn-sm {
-  font-size: 1.5vmin;
-  padding: 0.6vmin 0.8vmin;
-}
-
-button.btn-xs {
-  font-size: 1.3vmin;
-  padding: 0.4vmin 0.5vmin;
-  color: white;
-  text-shadow: -1px 0 rgb(248, 111, 6), 0 1px rgb(248, 111, 6);
-}
-
-button:disabled,
-form:invalid button[type="submit"] {
-  cursor: not-allowed;
-  background-color: var(--tan-4);
-}
-
-button[type="submit"] {
-  grid-column: span 2;
-  margin: 1vmin 0 0;
-}
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
 
 
 
-button {
-    font-family: "Kalam", sans-serif;
-    color: #ffffff;
-    text-shadow: -1px 0 rgb(248, 111, 6), 0 1px rgb(248, 111, 6);
-    text-decoration: none;
-}
 
 header {
     justify-content: space-between;
@@ -335,18 +278,42 @@ header {
 
 button {
     padding: 9px 18px;
-    background-color: rgb(255, 217, 187);
-    border: none;
-    border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease 0s;
+    font-family: "Kalam", sans-serif;
+    color: #ffffff;
+    text-shadow: -1px 0 rgb(248, 111, 6), 0 1px rgb(248, 111, 6);
+    text-decoration: none;
 }
 
-button:hover {
-    background-color: #ff791f;
-    transition: all 0.3s ease 0s;
+.neon1 {
+  color: rgb(255, 255, 255);
+  text-shadow:
+    0 0 5px rgb(248, 111, 6),
+    0 0 10px rgb(248, 111, 6),
+    0 0 20px rgb(248, 111, 6),
+    0 0 30px rgb(248, 111, 6),
+    0 0 150px rgb(170, 114, 41);
 }
 
+
+
+.neon {
+  color: rgb(255, 255, 255);
+  text-shadow:
+    0 0 10px #fff,
+    0 0 100px rgb(170, 114, 41),
+    0 0 150px rgb(170, 114, 41);
+}
+
+.container {
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
 
 
 

@@ -2,10 +2,8 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
-// Always require and configure near the top
 require('dotenv').config();
 
-// connect to the database
 require('./config/database');
 
 const dreamersRouter = require("./routes/api/dreamers");
@@ -28,10 +26,6 @@ app.listen(port, function () {
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/dreamers', require('./routes/api/dreamers'))
 
-// const ensureLoggedIn = require('./config/ensureLoggedIn');
-// app.use('/api/dreamers', ensureLoggedIn, require('./routes/api/dreamers'));
-
-// The following "catch all" route (note the *) is necessary
 app.get('/*', function (req, res) {
 	res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });

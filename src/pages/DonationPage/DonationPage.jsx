@@ -21,7 +21,7 @@ export default function DonationPage({ handleAddDreamer }) {
         <a
           href="https://www.raicestexas.org/ways-to-give/daca-fund/"
           target="_blank"
-          className="donation-link"
+          className="neon"
         >
           The Refugee & Immigrant Center for Education & Legal Services
         </a>
@@ -29,7 +29,7 @@ export default function DonationPage({ handleAddDreamer }) {
         <a
           href="https://unitedwedream.org/"
           target="_blank"
-          className="donation-link"
+          className="neon"
         >
           United We Dream
         </a>
@@ -37,7 +37,7 @@ export default function DonationPage({ handleAddDreamer }) {
         <a
           href="https://www.alientoaz.org/"
           target="_blank"
-          className="donation-link"
+          className="neon"
         >
           Aliento
         </a>
@@ -45,7 +45,7 @@ export default function DonationPage({ handleAddDreamer }) {
         <a
           href="https://www.classy.org/campaign/protect-dreamers/c163415"
           target="_blank"
-          className="donation-link"
+          className="neon"
         >
           Mission Asset Fund
         </a>
@@ -53,7 +53,7 @@ export default function DonationPage({ handleAddDreamer }) {
         <a
           href="https://www.ilrc.org/daca-manual?gclid=Cj0KCQjwp86EBhD7ARIsAFkgakiso7Oss1oTLyTJ8ep4Qqawc6QVdVUZ4exnzBefa7ywYEFBmlx9FPsaAmoSEALw_wcB"
           target="_blank"
-          className="donation-link"
+          className="neon"
         >
           Immigration Legal Resource Center
         </a>
@@ -61,7 +61,7 @@ export default function DonationPage({ handleAddDreamer }) {
         <a
           href="https://www.lawyersforgoodgovernment.org/project-corazon-matamoros?gclid=Cj0KCQjwp86EBhD7ARIsAFkgakjptSnFp8Q6AmccqHcecUBING0J6FknPI0w8qdtvnNqFkPR6NvUCm4aAl6GEALw_wcB"
           target="_blank"
-          className="donation-link"
+          className="neon"
         >
           Project Corazon
         </a>
@@ -69,7 +69,7 @@ export default function DonationPage({ handleAddDreamer }) {
         <a
           href="https://www.unidosus.org/issues/immigration/daca/"
           target="_blank"
-          className="donation-link"
+          className="neon"
         >
           Unidos US
         </a>

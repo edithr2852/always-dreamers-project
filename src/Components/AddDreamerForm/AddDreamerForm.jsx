@@ -104,8 +104,8 @@ export default function AddDreamerForm({ handleAddDreamer, user}){
         </div>
 
         <button
+        className="btn btn-3"
           type="submit"
-          className="btn"
           disabled={invalidForm}
         >
           ADD Dreamer Story

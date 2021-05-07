@@ -7,24 +7,24 @@ function DreamerStory({ dreamer }) {
 		<div className='dreamersStoryPage'>
 			<div className='panel-body no-border'>
 				<dl>
-					<dt></dt>
+					<dt className="underline">Occupation</dt>
 					<dd>{dreamer.occupation}</dd>
 					<br />
-					<dt>Country of Origin</dt>
+					<dt className="underline">Country of Origin</dt>
 					<dd>{dreamer.countryOfOrigin}</dd>
 					<br />
-					<dt>Languages Spoken</dt>
+					<dt className="underline">Languages Spoken</dt>
 					<dd>{dreamer.languages}</dd>
 					<br />
-					<dt>About Me</dt>
+					<dt className="underline">About Me</dt>
 					<dd>{dreamer.aboutMe}</dd>
 					<br />
-					<dt>Personal Links</dt>
-					<dd ><a href={dreamer.personalLink} target="_blank" className="link">{dreamer.personalLink}</a></dd>
+					<dt className="underline">Personal Links</dt>
+					<dd ><a href={dreamer.personalLink} target="_blank" className="neon">{dreamer.personalLink}</a></dd>
 				</dl>
 			</div>
 			<div className='panel-footer'>
-				<Link to='/' className='panel-footer link'>RETURN TO LIST</Link>
+				<Link to='/' className='panel-footer link'><button className="btn btn-3">RETURN TO LIST</button></Link>
 			</div>
 		</div>
 	);

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../../index.scss";
 
 function Dreamer({ dreamer, handleDeleteDreamer, user }) {
   return (
@@ -17,8 +18,9 @@ function Dreamer({ dreamer, handleDeleteDreamer, user }) {
                 pathname: "/stories",
                 state: { dreamer },
               }}
-            >
+            ><button className="btn btn-3">
               DETAILS
+              </button>
             </Link>
 			{user && (
 				<>
@@ -31,21 +33,22 @@ function Dreamer({ dreamer, handleDeleteDreamer, user }) {
                     pathname: "/edit",
                     state: { dreamer },
                   }}
-                >
+                ><button className="btn btn-3">
                   EDIT
+                  </button>
                 </Link>
                 &nbsp; | &nbsp;
-                <button
-                  className="btn btn-xs btn-danger margin-left-10"
+                <div class="container">
+                <button className="btn btn-3"
                   onClick={() => handleDeleteDreamer(dreamer._id)}
                 >
                   DELETE
                 </button>
+                </div>
               </>
             )}
 			</>
 			)}
-
           </div>
         </div>
       </main>
